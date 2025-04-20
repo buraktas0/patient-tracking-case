@@ -1,0 +1,19 @@
+<div class="flex flex-col items-center justify-center h-screen">
+    <div class="flex sm:flex-row flex-col bg-white rounded-lg shadow-lg p-8 gap-4">
+        <img src="https://placehold.co/200x250" alt="logo" class="self-center rounded-lg w-[200px] h-[250px]">
+
+        <div class="flex flex-col justify-stretch gap-4">
+            <h1 class="text-2xl font-bold">Register</h1>
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="flex flex-col gap-4">
+                <input type="text" placeholder="Email" formControlName="email" class="form-input">
+                <input type="password" placeholder="Password" formControlName="password" class="form-input">
+
+                <a href="/login" class="text-center text-sm text-blue-500">Already have an account? Login</a>
+
+                <button [disabled]="!registerForm.valid" type="submit"
+                    class="w-full p-2 mt-2 rounded-lg bg-blue-500 text-white"
+                    [ngClass]="{'disabled-button': !registerForm.valid}">Register</button>
+            </form>
+        </div>
+    </div>
+</div>

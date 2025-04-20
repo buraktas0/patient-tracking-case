@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+@use 'tailwindcss/base';
+@use 'tailwindcss/components';
+@use 'tailwindcss/utilities';
+
+.form-input {
+    @apply w-full rounded-lg p-2 border border-gray-300 focus:border-blue-500 focus:ring-blue-500 focus:ring-2 focus:ring-opacity-50;
+}
+
+.action-button {
+    @apply bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600;
+}
+
+.action-button-with-icon {
+    @apply flex items-center gap-2 bg-blue-500 text-white sm:px-4 px-2 py-2 rounded-md hover:bg-blue-600;
+}
+
+.disabled-button {
+    @apply bg-gray-300 text-gray-500 cursor-not-allowed;
+}

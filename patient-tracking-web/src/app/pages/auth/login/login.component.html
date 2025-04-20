@@ -1,0 +1,20 @@
+<div class="flex flex-col items-center justify-center h-screen">
+    <div class="flex sm:flex-row flex-col bg-white rounded-lg shadow-lg p-8 gap-4">
+        <img src="https://placehold.co/200x250" alt="logo" class="self-center rounded-lg w-[200px] h-[250px]">
+
+        <div class="flex flex-col justify-stretch gap-4">
+            <h1 class="text-2xl font-bold">Welcome</h1>
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="flex flex-col gap-4">
+                <input type="text" placeholder="Email" formControlName="email" class="form-input">
+                <input type="password" placeholder="Password" formControlName="password" class="form-input">
+                <div class="flex justify-between">
+                    <a href="/forgot-password" class="text-sm text-blue-500">Forgot password?</a>
+                    <a href="/register" class="text-sm text-blue-500">Register</a>
+                </div>
+                <button [disabled]="!loginForm.valid" type="submit"
+                    class="w-full p-2 mt-2 rounded-lg bg-blue-500 text-white"
+                    [ngClass]="{'disabled-button': !loginForm.valid}">Login</button>
+            </form>
+        </div>
+    </div>
+</div>
